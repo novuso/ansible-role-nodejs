@@ -1,0 +1,7 @@
+---
+- hosts: all
+  vars:
+  - nodejs_packages:
+    - name: "bower"
+  roles:
+  - ansible-role-nodejs
