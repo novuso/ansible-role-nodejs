@@ -1,0 +1,14 @@
+---
+- name: "npm packages"
+  npm:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    global: "{{ item.global | default('yes') }}"
+    production: "{{ item.production | default('no') }}"
+    version: "{{ item.version | default(omit) }}"
+    ignore_scripts: "{{ item.ignore_scripts | default('no') }}"
+    executable: "{{ item.executable | default(nodejs_nvm_dir + '/versions/node/' + _node_ver.stdout + '/bin/npm') }}"
+    path: "{{ item.path | default(omit) }}"
+    registry: "{{ item.registry | default(omit) }}"
+  with_items: nodejs_packages
+  when: item.name is defined

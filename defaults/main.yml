@@ -1,0 +1,15 @@
+---
+nodejs_version: "0.12"
+nodejs_nvm_git_repo: "https://github.com/creationix/nvm.git"
+nodejs_nvm_dir: "/home/{{ ansible_user_id }}/.nvm"
+# nodejs_packages
+# - name: "bower"                                #required
+#   state: present                               #default
+#   global: yes                                  #default
+#   production: no                               #default
+#   version: "0.1.0"                             #omitted
+#   ignore_scripts: no                           #default
+#   executable: "/path/to/npm"                   #default
+#   path: "/base/path"                           #omitted
+#   registry: registry                           #omitted
+nodejs_packages: []
