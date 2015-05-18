@@ -4,6 +4,10 @@ python: "2.7"
 
 before_install:
   - sudo apt-get update -qq
+  - >
+    if [ -d ~/.nvm ]; then
+      rm -rf ~/.nvm
+    endif
 
 install:
   - pip install ansible
