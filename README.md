@@ -1,5 +1,6 @@
 # Ansible Role: Node.js
 
+[![Ansible Galaxy](http://img.shields.io/badge/galaxy-novuso.nodejs-000000.svg)](https://galaxy.ansible.com/list#/roles/3819)
 [![MIT License](http://img.shields.io/badge/license-MIT-003399.svg)](http://opensource.org/licenses/MIT)
 
 An Ansible role that manages Node.js on Ubuntu 14.04
