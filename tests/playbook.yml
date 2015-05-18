@@ -1,6 +1,7 @@
 ---
 - hosts: all
   vars:
+  - nodejs_nvm_dir: "/home/{{ ansible_user_id }}/.nodejs"
   - nodejs_packages:
     - name: "bower"
   roles:

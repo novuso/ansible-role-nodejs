@@ -15,17 +15,17 @@
 - name: "nvm in path"
   lineinfile:
     dest: "~/.bashrc"
-    line: 'export PATH="$PATH:$HOME/.nvm/bin"'
+    line: 'export PATH="$PATH:{{ nodejs_nvm_dir }}/bin"'
     state: present
 
 - name: "source nvm bashrc"
   lineinfile:
     dest: "~/.bashrc"
-    line: "source ~/.nvm/nvm.sh"
+    line: "source {{ nodejs_nvm_dir }}/nvm.sh"
     state: present
 
 - name: "node installed"
-  script: "node-install.sh {{ nodejs_version }} {{ nodejs_nvm_dir }}/.node-{{ nodejs_version }}"
+  script: "node-install.sh {{ nodejs_version }} {{ nodejs_nvm_dir }}"
   changed_when: false
 
 - name: "source .bashrc"
