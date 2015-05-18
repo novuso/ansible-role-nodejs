@@ -28,10 +28,6 @@
   script: "node-install.sh {{ nodejs_version }} {{ nodejs_nvm_dir }}"
   changed_when: false
 
-- name: "source .bashrc"
-  shell: ". ~/.bashrc"
-  changed_when: false
-
 - name: "node version"
   shell: "cat /home/{{ ansible_user_id }}/.node-version"
   register: _node_ver
